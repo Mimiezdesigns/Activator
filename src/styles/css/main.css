@@ -1,0 +1,249 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #f2f2f2;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container .login-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+.login-container .login-card .brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.login-container .login-card .brand-logo img {
+  height: 40px;
+}
+.login-container .login-card .test-box {
+  background-color: #e9f2fb;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.login-container .login-card .test-box p {
+  margin: 0;
+  color: #195a8c;
+}
+.login-container .login-card form .form-label {
+  font-weight: 500;
+}
+.login-container .login-card form .form-control {
+  border-radius: 8px;
+}
+.login-container .login-card form .btn-primary {
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 500;
+  background-color: #195a8c;
+  border: none;
+  transition: all 0.3s ease;
+}
+.login-container .login-card form .btn-primary:hover {
+  background-color: rgb(17.2727272727, 62.1818181818, 96.7272727273);
+}
+.login-container .login-card form .btn-primary:disabled {
+  background-color: #c9d3de !important;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.login-container .login-card form .btn-primary.active {
+  background-color: #195a8c !important;
+  color: #fff !important;
+  opacity: 1;
+}
+
+.verify-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.verify-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.verify-card {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 440px;
+  max-height: 600px;
+  text-align: center;
+  overflow-y: auto;
+}
+.verify-card .brand-logo img {
+  height: 35px;
+}
+.verify-card .test-box {
+  background-color: #e9f2fb;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.verify-card .test-box p {
+  margin: 0;
+  color: #195a8c;
+}
+.verify-card .otp-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.verify-card .otp-inputs .dash {
+  font-size: 40px;
+  color: #999;
+  margin: 0 5px;
+}
+.verify-card .otp-inputs .otp-box {
+  width: 48px;
+  height: 60px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 8px;
+  border: 1px solid #d3d6da;
+  font-weight: 600;
+  color: black;
+}
+.verify-card .otp-inputs .otp-box:focus {
+  outline: none;
+  border-color: #195a8c;
+  box-shadow: 0 0 4px rgba(28.8636363636, 103.9090909091, 161.6363636364, 0.6);
+}
+.verify-card .back-btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  width: 180px;
+  font-weight: 600;
+  color: #494e58;
+}
+.verify-card .confirm-btn {
+  background-color: rgb(92.0909090909, 167.7272727273, 225.9090909091);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  width: 180px;
+}
+.verify-card .confirm-btn:not(:disabled):hover {
+  background-color: rgb(17.2727272727, 62.1818181818, 96.7272727273);
+}
+.verify-card .confirm-btn:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: #a7a7ae;
+}
+.verify-card .confirm-btn:not(:disabled) {
+  background-color: #195a8c;
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.password-card {
+  width: 100%;
+  max-width: 440px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.password-card h5 {
+  color: #193b5a;
+}
+.password-card .password-requirements {
+  background-color: #fafafa;
+  font-size: 14px;
+}
+.password-card .password-requirements ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.password-card .password-requirements ul li .req-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e2edf6;
+  margin-right: 10px;
+  position: relative;
+}
+.password-card .password-requirements ul li .req-icon.valid {
+  background-color: #e2edf6;
+}
+.password-card .password-requirements ul li .req-icon.valid::after {
+  content: "✓";
+  color: #195a8c;
+  font-size: 20px;
+  position: absolute;
+  font-weight: lighter;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.password-card .btn-primary {
+  font-weight: 500;
+  background-color: #195a8c;
+  padding: 10px 0;
+}
+.password-card .btn-primary:disabled {
+  background-color: #cbd5e1 !important;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}/*# sourceMappingURL=main.css.map */
