@@ -1,0 +1,30 @@
+@use '../partials//variables' as vars;
+
+@mixin test-box {
+  background-color: vars.$box-bg;
+  border-radius: vars.$input-radius;
+  padding: 15px 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  p {
+    margin: 0;
+    color: #195a8c;
+  }
+}
+
+@mixin hide-scrollbar{
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+}
+
+
