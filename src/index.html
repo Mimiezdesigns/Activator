@@ -16,40 +16,66 @@
   <div class="login-container">
     <div class="login-card text-center">
       <div class="brand-logo mb-3">
-        <img src="./public/assets/logo/logo.svg" alt="Activator Logo">
+        <img src="./public/assets/logo/logo.svg" class="logo" alt="Activator Logo">
       </div>
 
-      <h4 class="fw-bold mb-2">Log in to your account</h4>
+      <h4 class="fw-bold mb-5">Log in to your account</h4>
 
-      <div class="test-box text-start">
+      <!-- <div class="test-box text-start">
         <p class="fw-semibold mb-1">Test Credentials</p>
         <p><strong>Existing User:</strong> admin / Admin123!</p>
         <p><strong>New User:</strong> newuser / TempPass123!</p>
         <p class="text-muted fs-7"><strong>OTP Code:</strong> 123-456</p>
-      </div>
+      </div> -->
 
-      <form>
+      <form class="login-form">
         <div class="mb-3 text-start">
           <label for="username" class="form-label">Username</label>
           <input type="text" class="form-control" id="username" placeholder="Enter your username">
         </div>
 
-        <div class="mb-3 text-start position-relative">
+        <div class="mb-4 text-start position-relative">
           <label for="password" class="form-label">Password</label>
           <div class="position-relative">
             <input type="password" class="form-control" id="password" placeholder="••••••••">
-            <span class="toggle-password position-absolute end-0 top-50 translate-middle-y me-3 text-muted">
-              <img src="./public/assets/icons/eyes-icon.svg" alt="" srcset="">
-            </span>
+              <span
+                class="toggle-password position-absolute end-0 top-50 translate-middle-y me-3 text-muted"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="12"
+                  viewBox="0 0 16 12"
+                  fill="none"
+                >
+                  <path
+                    d="M1.17592 6.14212C1.08512 5.99836 1.03973 5.92648 1.01432 5.81561C0.995228 5.73233 0.995228 5.601 1.01432 5.51772C1.03973 5.40685 1.08512 5.33497 1.17591 5.19121C1.92619 4.00323 4.15943 1 7.56277 1C10.9661 1 13.1994 4.00323 13.9496 5.19121C14.0404 5.33497 14.0858 5.40685 14.1112 5.51772C14.1303 5.601 14.1303 5.73233 14.1112 5.81561C14.0858 5.92648 14.0404 5.99836 13.9496 6.14212C13.1994 7.33011 10.9661 10.3333 7.56277 10.3333C4.15943 10.3333 1.92619 7.33011 1.17592 6.14212Z"
+                    stroke="#A4A7AE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.56277 7.66667C8.66734 7.66667 9.56277 6.77124 9.56277 5.66667C9.56277 4.5621 8.66734 3.66667 7.56277 3.66667C6.4582 3.66667 5.56277 4.5621 5.56277 5.66667C5.56277 6.77124 6.4582 7.66667 7.56277 7.66667Z"
+                    stroke="#A4A7AE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+        <button type="submit" class="btn-primary w-100">Sign in</button>
       </form>
     </div>
   </div>
 
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./scripts/auth/verify.js"></script>
 </body>
+
 </html>

@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="../../../styles/css/main.css">
 </head>
 
-<body class="verify-body">
+<body>
 
-  <div class="verify-container">
-    <div class="verify-card text-center">
-      <div class="brand-logo mb-5">
-        <img src="../../../public/assets/logo/logo.svg" alt="Activator Logo">
+  <div class="login-container">
+    <div class="login-card text-center p-3">
+      <div class="brand-logo mb-3">
+        <img src="../../../public/assets/logo/logo.svg" class="logo" alt="Activator Logo">
       </div>
+
 
       <h4 class="fw-bold mb-2">Set up 2FA Authentication</h4>
       <p class="text-muted">
@@ -24,9 +25,9 @@
       </p>
 
       
-      <div class="test-box text-start">
+      <!-- <div class="test-box text-start">
         <p class="fw-semibold mb-1">Test OTP Code: <span class="fw-light">123-456</span></p>
-      </div>
+      </div> -->
 
       <div>
         <img src="../../../public/assets/images/qrcodescanner.png" alt="" srcset="">
@@ -38,22 +39,26 @@
 
       <form id="otpForm" action="../change-password.html" >
         <div class="otp-inputs">
-          <input type="text" maxlength="1" class="otp-box form-control" required>
-          <input type="text" maxlength="1" class="otp-box form-control" required>
-          <input type="text" maxlength="1" class="otp-box form-control" required>
+          <input type="text" maxlength="1" class="form-control otp-box" required>
+          <input type="text" maxlength="1" class=" form-control otp-box" required>
+          <input type="text" maxlength="1" class=" form-control otp-box" required>
           <span class="dash">-</span>
-          <input type="text" maxlength="1" class="otp-box form-control" required>
-          <input type="text" maxlength="1" class="otp-box form-control" required>
-          <input type="text" maxlength="1" class="otp-box form-control" required>
+          <input type="text" maxlength="1" class=" form-control otp-box" required>
+          <input type="text" maxlength="1" class=" form-control otp-box" required>
+          <input type="text" maxlength="1" class=" form-control otp-box" required>
         </div>
         <div class="text-muted text-start">
           <p>Did&apos;t get the code ? clck resend <p>
         </div>
-        <div class="d-flex justify-content-between gap-4">
-          <button type="button" class="btn btn-outline-secondary back-btn">
-            <i class="bi bi-arrow-left"></i> Back
+
+        <div class="otp-actions">
+          <button type="button" class="btn btn-outline-secondary btn-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+              <path d="M14.1663 5.83331H0.833008M0.833008 5.83331L5.83301 10.8333M0.833008 5.83331L5.83301 0.833313"
+                stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>     <span> Back</span>
           </button>
-          <button type="submit" id="confirmBtn" class="btn confirm-btn" disabled>
+          <button type="submit" id="confirmBtn" class="btn btn-confirm" disabled>
             Confirm
           </button>
         </div>
