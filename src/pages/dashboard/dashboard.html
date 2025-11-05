@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activator Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles//css//main.css">
+</head>
+
+<body class="bg-light">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-whitepy-2 px-3  shadow-sm navbox">
+    <div class="container-fluid px-3 gap-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./image/Logo.png" alt="logo" style="height:28px;">
+      </a>
+
+      <!-- Desktop nav links (visible lg and up) -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav me-auto align-items-center">
+          <li class="nav-item me-3">
+            <a class="nav-link d-flex align-items-center gap-2 text-white" href="#"><img src="./image/device.png" alt=""
+                srcset="">Devices</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link d-flex align-items-center gap-2 text-white" href="#"><img src="./image/profile.png"
+                alt="">Profiles</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link d-flex align-items-center gap-2 text-white" href="#"><img src="./image/jobs.png" alt=""
+                srcset="">Jobs</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link d-flex align-items-center gap-2 text-white" href="#"><img src="./image/settings.png"
+                alt="" srcset="">Settings</a>
+          </li>
+
+        </ul>
+
+        <!-- Center search (desktop) -->
+        <form class="d-none d-lg-flex mx-auto" style="width: 50%; max-width: 500px;">
+          <div class="input-group">
+            <span class="input-group-text bg-light border-0"><img src="./image/search-icon.png" alt="" srcset=""></span>
+            <input type="text" class="form-control border-0 bg-light outline-none" placeholder="Search">
+            <span class="input-group-text bg-light border-0"><img src="./image/shortcut.png" alt="" srcset=""></span>
+
+          </div>
+      </div>
+
+      <!-- Right-side controls -->
+      <div class="d-flex align-items-center ms-auto"> 
+        
+        <ul class="navbar-nav me-auto align-items-center d-none d-lg-flex">
+          <li class="nav-item me-3">
+            <a class="nav-link d-flex align-items-center gap-2 text-white" href="#"><img src="./image/timer.png" alt=""
+                srcset="">Recent</a>
+          </li>
+        </ul>
+        <button class="btn btn-light me-3 d-none d-lg-inline-flex navbutton">+ Add</button>
+       
+        <div class="dropdown me-2 d-none d-lg-inline-flex">
+          <a href="#" class="d-flex align-items-center text-decoration-none" id="userDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <div class="rounded-circle bg-secondary d-flex justify-content-center align-items-center bg-light text-dark"
+              style="width:36px;height:36px;">BB</div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a>
+            </li>
+          </ul>
+        </div>
+
+         <!-- Mobile / tablet offcanvas toggle -->
+          <div class=" mobile-toggle">
+            <button class="btn btn-light  d-lg-none mobile-navbutton ">+ Add</button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        
+
+        <!-- Mobile Offcanvas -->
+        <div class="offcanvas offcanvas-end d-lg-none " tabindex="-1" id="offcanvasMenu">
+          <div class="offcanvas-header pb-0">
+           
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+
+          <div class="offcanvas-body p-4">
+            <!-- Search bar -->
+            <form class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text bg-light border-0">
+                  <img src="./image/search-icon.png" alt="">
+                </span>
+                <input type="text" class="form-control border-0 bg-light" placeholder="Search">
+                <span class="input-group-text bg-light border-0">
+                  <img src="./image/shortcut.png" alt="">
+                </span>
+              </div>
+            </form>
+
+            <!-- Menu links -->
+            <ul class="navbar-nav mb-4">
+              <li class="nav-item mb-2"><a class="nav-link d-flex align-items-center gap-2" href="#"><img
+                    src="./image/device.png" alt="">Devices</a></li>
+              <li class="nav-item mb-2"><a class="nav-link d-flex align-items-center gap-2" href="#"><img
+                    src="./image/profile.png" alt="">Profiles</a></li>
+              <li class="nav-item mb-2"><a class="nav-link d-flex align-items-center gap-2" href="#"><img
+                    src="./image/jobs.png" alt="">Jobs</a></li>
+              <li class="nav-item mb-2"><a class="nav-link d-flex align-items-center gap-2" href="#"><img
+                    src="./image/settings.png" alt="">Settings</a></li>
+            </ul>
+
+            <!-- User Info and Sign Out -->
+            <div class="border-top pt-3 mt-auto">
+              <div class="d-flex align-items-center mb-3">
+                <div class="rounded-circle bg-light d-flex justify-content-center align-items-center"
+                  style="width:36px;height:36px;">BB</div>
+                <span class="ms-2 fw-semibold">Bunmi Bakare</span>
+              </div>
+              <button class="btn btn-outline-danger w-100"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </nav>
+
+
+  <div class="inner-body">
+    <!-- DASHBOARD STATS -->
+    <section class="container-fluid py-4 grid-container">
+      <div class="row g-3 gap-2 grid-container-inner">
+        <div class="col-12 col-md-6 gridboxes">
+          <div class="bg-white p-3  shadow-sm grid-inner-boxes">
+            <p class="text-muted small mb-1">Total Devices</p>
+            <h4 class="fw-semibold mb-0">1,234</h4>
+            <small class="text-success">+10% this month</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 gridboxes">
+          <div class="bg-white p-3 shadow-sm grid-inner-boxes">
+            <p class="text-muted small m-1 mb-2">Device Activations</p>
+            <div class="d-flex justify-content-between m-1 mb-2">
+              <div class="d-flex gap-2 align-items-center"><img src="./image/green-dot.png" alt="" srcset=""><small
+                  class="text-dark">Deployed</small></div>
+              <small>800</small>
+            </div>
+            <div class="d-flex justify-content-between m-1 mb-2">
+              <div class="d-flex gap-2 align-items-center"><img src="./image/blue-dot.png" alt="" srcset=""><small
+                  class="text-dark">Ready to Deploy</small>
+              </div>
+              <small>150</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 gridboxes">
+          <div class="bg-white p-3 shadow-sm grid-inner-boxes">
+            <p class="text-muted small  m-1 mb-2">Active Profile</p>
+            <h4 class="fw-semibold  m-1 mb-2">567</h4>
+            <small class=" m-1 mb-2">1,024 devices</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 gridboxes ">
+          <div class="bg-white p-3 shadow-sm grid-inner-boxes">
+            <p class="text-muted small  m-1 mb-2">Jobs Running</p>
+            <h4 class="fw-semibold  m-1 mb-3">3</h4>
+            <div class="progress m-1 mb-2" style="height:6px;">
+              <div class="progress-bar progressbar" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOBS + ALERTS -->
+    <section class="container-fluid px-3 pb-4 section">
+      <div class="row g-4">
+        <!-- Active Jobs -->
+
+        <div class="col-12 col-lg-8 ">
+          <div class="bg-white shadow-sm job-section">
+            <div class="d-flex justify-content-between align-items-center mb-3 p-3">
+              <h6 class="fw-semibold mb-0">Active Jobs</h6>
+              <h6 class="small text-primary">View All Jobs</h6>
+            </div>
+            <div class="table-responsive table-div">
+              <table class="table align-middle mb-0">
+                <thead class="text-muted small">
+                  <th class="">Job Name</th>
+                  <th>Number of Devices</th>
+                  <th>State</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="">
+                    <td class="job-name">Health Check Scan</td>
+                    <td class="d-flex gap-2 align-items-center"><img src="./image/device-grey.png" alt=""
+                        srcset=""><span>85</span></td>
+                    <td><span class=" pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td class="job-name">Log Cleanup</td>
+                    <td class="d-flex gap-2 align-items-center"><img src="./image/device-grey.png" alt=""
+                        srcset=""><span>85</span></td>
+                    <td><span class="completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td class="job-name">Compliant Audit</td>
+                    <td class="d-flex gap-2 align-items-center"><img src="./image/device-grey.png" alt=""
+                        srcset=""><span>85</span></td>
+                    <td><span class="completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td class="job-name">Network Optimization</td>
+                    <td class="d-flex gap-2 align-items-center"><img src="./image/device-grey.png" alt=""
+                        srcset=""><span>85</span></td>
+                    <td><span class="running">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td class="job-name">Certificate Renewal</td>
+                    <td class="d-flex gap-2 align-items-center"><img src="./image/device-grey.png" alt=""
+                        srcset=""><span>85</span></td>
+                    <td><span class="pending">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="col-12 col-lg-4 ">
+          <div class="bg-white rounded shadow-sm p-3 alert-section">
+            <h6 class="fw-semibold mb-5">Alerts & Notifications</h6>
+
+            <div class="alert-flex-box">
+
+              <div class="d-flex border justify-content-between align-items-center border-bottom py-2 gap-2 alert-box">
+                <img src="./image/warning-yellow.png" alt="" srcset="">
+                <div class="alert-section-text-boxes">
+                  Device Connectivity Issue
+                  <div class="small text-muted">2023-08-15 11:30 AM</div>
+                </div>
+                <img src="./image/close.png" alt="" srcset="">
+              </div>
+
+              <div class="d-flex border justify-content-between align-items-center border-bottom py-2 gap-2 alert-box">
+                <img src="./image/x-close.png" alt="" srcset="">
+
+                <div class="alert-section-text-boxes">
+                  Profile Update Failed
+                  <div class="small text-muted">2023-08-14 04:55 PM</div>
+                </div>
+                <img src="./image/close.png" alt="" srcset="">
+              </div>
+
+              <div class="d-flex border justify-content-between align-items-center border-bottom py-2 gap-2 alert-box">
+                <img src="./image/warning-green.png" alt="" srcset="">
+
+                <div class="alert-section-text-boxes">
+                  Security Alert
+                  <div class="small text-muted">2023-08-13 01:20 PM</div>
+                </div>
+                <img src="./image/close.png" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="bg-white rounded shadow-sm p-3 overflow-auto alert-section">
+            <h6 class="fw-semibold mb-3">Recent Activity Feed</h6>
+
+            <div class=" d-flex flex-column  gap-4 mt-5">
+
+              <div class="activity-item d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2 text-nowrap">
+                  <img src="./image/Avatar.png" alt="Avatar">
+                  Device Added <span class="text-primary">"Senso-314"</span> by User A
+                </div>
+                <span class="text-muted">1d ago</span>
+              </div>
+
+              <div class="activity-item d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-2 align-items-center text-nowrap">
+                  <img src="./image/Avatar.png" alt="Avatar">Profile Updated
+                  <span class="text-primary">"Default-Config"</span> by User B
+                </div>
+                <span class="text-muted">2d ago</span>
+              </div>
+
+              <div class="activity-item d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-2 align-items-center text-nowrap">
+                  <img src="./image/Avatar.png" alt="Avatar">User Logged In by User C
+                </div>
+                <span class="text-muted">3d ago</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

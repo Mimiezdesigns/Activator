@@ -33,42 +33,42 @@ document.addEventListener("DOMContentLoaded", () => {
             const input = toggle.previousElementSibling;
             if (!input) return;
             input.type = input.type === "password" ? "text" : "password";
-            toggle.innerHTML =
-                input.type === "password"
-                    ? '<i class="bi bi-eye"></i>'
-                    : '<i class="bi bi-eye-slash"></i>';
+            toggle.innerHTML = isPassword
+                ? '<img src="../../public/assets/icons/eye-slash-icon.svg" alt="Hide password"/>'
+                : '<img src="../../public/assets/icons/eye-icon.svg" alt="Show password"/>';
+
         });
     });
 
     // Login page logic
     const loginForm = document.querySelector("form");
-    const emailInput = document.getElementById("email");
+    const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("password");
 
-    if (loginForm && emailInput && passwordInput) {
+    if (loginForm && usernameInput && passwordInput) {
         const loginBtn = loginForm.querySelector("button[type='submit']");
 
         // Disable button until inputs are filled
         loginBtn.disabled = true;
 
         const checkInputs = () => {
-            const filled = emailInput.value.trim() !== "" && passwordInput.value.trim() !== "";
+            const filled = usernameInput.value.trim() !== "" && passwordInput.value.trim() !== "";
             loginBtn.disabled = !filled;
             loginBtn.classList.toggle("active", filled);
         };
 
-        emailInput.addEventListener("input", checkInputs);
+        usernameInput.addEventListener("input", checkInputs);
         passwordInput.addEventListener("input", checkInputs);
 
         loginForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const email = emailInput.value.trim();
+            const username = usernameInput.value.trim();
             const password = passwordInput.value.trim();
 
-            if (email === "admin@activator.com" && password === "Admin123!") {
+            if (username === "admin" && password === "Admin123!") {
                 window.location.href = "./pages/auth/verify.html";
-            } else if (email === "newuser@activator.com" && password === "TempPass123!") {
+            } else if (username === "newuser" && password === "TempPass123!") {
                 window.location.href = "./pages/auth/new-user/new-user.html";
             } else {
                 alert("Invalid email or password");
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     confirmInput.addEventListener("input", checkMatch);
 
-  
+
 
     document.getElementById("passwordForm").addEventListener("submit", e => {
         e.preventDefault();
