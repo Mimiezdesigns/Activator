@@ -1,0 +1,19 @@
+// Background colors
+@use '../variables' as *;
+
+// Background colors
+.bg-primary { background-color: $color-brand-600 ; }
+.bg-secondary { background-color: $color-gray-light-mode-600 ; }
+.bg-success { background-color: $color-success-600 ; }
+.bg-danger { background-color: $color-error-600 ; }
+.bg-warning { background-color: $color-warning-600 ; }
+.bg-info { background-color: $color-cyan-600 ; }
+.bg-light { background-color: $color-gray-light-mode-100 ; }
+.bg-dark { background-color: $color-gray-dark-mode-900 ; }
+.bg-white { background-color: $color-base-white ; }
+.bg-transparent { background-color: transparent ; }
+
+// Background gradient
+.bg-gradient {
+  background-image: var(--bs-gradient) ;
+}

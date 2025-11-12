@@ -1,0 +1,50 @@
+@use '../variables' as *;
+
+.badge {
+    position: relative;
+    border-radius: $radius-full;
+    background-color: $color-brand-50;
+    border: 1px solid $color-brand-200;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-family: $font-family-body;
+    color: $color-brand-700;
+
+    &.badge-sm {
+        padding: $spacing-0-5 $spacing-2 $spacing-0-5 $spacing-1-5;
+        gap: $spacing-1;
+        font-size: $font-size-text-xs;
+    }
+
+    &.badge-md {
+        padding: $spacing-0-5 $spacing-2-5 $spacing-0-5 $spacing-2;
+        gap: $spacing-1-5;
+        font-size: $font-size-text-sm;
+    }
+
+    &.badge-lg {
+        padding: $spacing-1 $spacing-3 $spacing-1 $spacing-2-5;
+        gap: $spacing-1-5;
+        font-size: $font-size-text-sm;
+    }
+
+    &.badge-success {
+        background-color: $color-success-50;
+        border-color: $color-success-200;
+        color: $color-success-700;
+    }
+
+    &.badge-warning {
+        background-color: $color-warning-50;
+        border-color: $color-warning-200;
+        color: $color-warning-700;
+    }
+
+    &.badge-error {
+        background-color: $color-error-50;
+        border-color: $color-error-200;
+        color: $color-error-700;
+    }
+}

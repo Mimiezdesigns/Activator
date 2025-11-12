@@ -1,0 +1,108 @@
+@use '../variables' as *;
+
+.form-select-wrapper {
+    position: relative;
+
+    .form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: $color-base-white;
+        border: 1px solid $color-gray-light-mode-300;
+        border-radius: $radius-sm;
+        padding: $spacing-1-5 $spacing-4 $spacing-1-5 $spacing-2;
+        font-size: $font-size-text-md;
+        line-height: $line-height-text-md;
+        width: 100%;
+        cursor: pointer;
+
+        &:focus {
+            border-color: $color-blue-500;
+            outline: 0;
+            box-shadow: $box-shadow-none;
+        }
+    }
+
+    &::after {
+        content: "▼";
+        position: absolute;
+        top: 50%;
+        right: $spacing-2;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: $color-gray-light-mode-600;
+    }
+
+    &.select-sm .form-select {
+        padding-top: $spacing-1;
+        padding-bottom: $spacing-1;
+        font-size: $font-size-text-sm;
+    }
+
+    &.select-lg .form-select {
+        padding-top: $spacing-2;
+        padding-bottom: $spacing-2;
+        font-size: $font-size-text-lg;
+    }
+}
+
+.select-menu {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    box-shadow: var(--colors-effects-focus-rings-focus-ring);
+    border-radius: $radius-md;
+    background-color: $color-base-white;
+    border: 1px solid $color-gray-dark-mode-alpha-800;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $spacing-1 0px;
+    max-height: $spacing-64;
+    text-align: left;
+    font-size: $font-size-text-md;
+    color: $color-gray-light-mode-900;
+    font-family: $font-family-body;
+
+    .select-option {
+        width: 100%;
+        position: relative;
+        border-radius: $radius-sm;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: $spacing-2;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: $font-size-text-md;
+        color: $color-gray-light-mode-900;
+        font-family: $font-family-body;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-gray-light-mode-50;
+        }
+
+        .text-and-supporting-text {
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            gap: $spacing-2;
+        }
+
+        .text {
+            position: relative;
+            line-height: $line-height-text-md;
+        }
+
+        .supporting-text {
+            position: relative;
+            line-height: $line-height-text-md;
+            color: $color-gray-light-mode-600;
+        }
+    }
+}

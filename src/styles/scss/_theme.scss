@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+// Function to deeply get a value from a nested map
+@function theme($map, $keys...) {
+  @each $key in $keys {
+    $map: map.get($map, $key);
+  }
+  @return $map;
+}
+
+// Mixin to create CSS custom properties from a theme map
+@mixin create-theme($theme-map, $prefix: "") {
+  @each $key, $value in $theme-map {
+    $new-prefix: if($prefix == "", $key, "#{$prefix}-#{$key}");
+    @if meta.type-of($value) == "map" {
+      @include create-theme($value, $new-prefix);
+    } @else {
+      --#{$new-prefix}: #{$value};
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "../variables" as *;
+
+.search-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-base-white;
+    border: 1px solid $color-gray-light-mode-200;
+    border-radius: $radius-md;
+    box-shadow: var(--colors-effects-shadows-shadow-lg-01);
+    padding: $spacing-1 0;
+    z-index: 1000;
+
+    .search-dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: $spacing-1 $spacing-2;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-gray-light-mode-50;
+        }
+
+        .item-icon {
+            margin-right: $spacing-2;
+            width: $spacing-4;
+            height: $spacing-4;
+        }
+
+        .item-text {
+            font-size: $font-size-text-sm;
+            color: $color-gray-light-mode-700;
+        }
+    }
+
+    .dropdown-divider {
+        height: 1px;
+        background-color: $color-gray-light-mode-200;
+        margin: $spacing-1 0;
+    }
+}

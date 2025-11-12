@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+
+.progress {
+    width: 100%;
+    height: $spacing-2;
+    position: relative;
+    border-radius: $radius-full;
+    background-color: $color-gray-light-mode-200;
+    overflow: hidden;
+
+    .progress-bar {
+        height: 100%;
+        position: relative;
+        border-radius: $radius-full;
+        background-color: $color-brand-600;
+        transition: width 0.3s ease-in-out;
+    }
+}

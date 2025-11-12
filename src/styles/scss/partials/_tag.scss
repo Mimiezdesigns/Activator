@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius-xs;
+    background-color: $color-gray-light-mode-100;
+    color: $color-gray-light-mode-700;
+    font-family: $font-family-body;
+    box-sizing: border-box;
+
+    &.tag-sm {
+        padding: 0 $spacing-1;
+        font-size: $font-size-text-xs;
+        line-height: $line-height-text-xs;
+    }
+
+    &.tag-md {
+        padding: 0 $spacing-1-5;
+        font-size: $font-size-text-xs;
+        line-height: 18px;
+    }
+
+    &.tag-lg {
+        padding: 0 $spacing-1-5;
+        font-size: $font-size-text-sm;
+        line-height: $line-height-text-sm;
+    }
+}

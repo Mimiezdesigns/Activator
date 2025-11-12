@@ -1,5 +1,27 @@
+@use 'sass:map';
 @use './resets';
 @use './variables' as *;
-@use './partials/login';
-@use './partials/otp';
-@use './partials/change-password'
+@use './theme';
+@use './partials/buttons';
+@use './partials/forms';
+@use './components/navbar';
+@use './partials/badge';
+@use './partials/select';
+@use './partials/progress';
+@use './partials/avatar';
+@use './partials/container';
+@use './partials/tag';
+@use './partials/search-dropdown';
+@use './partials/background';
+@use './partials/alert';
+@use './partials/modal';
+
+:root {
+  @include theme.create-theme(map.get($themes, "Light-mode"));
+
+  @each $name, $map in $themes {
+    @if $name != "Light-mode" and $name != "Dark-mode" {
+      @include theme.create-theme($map);
+    }
+  }
+}

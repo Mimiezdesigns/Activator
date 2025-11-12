@@ -1,0 +1,88 @@
+@use '../variables' as *;
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-0 $spacing-0-5;
+  text-align: left;
+  border: $spacing-0-5 solid transparent;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: $spacing-1;
+  width: 100%;
+
+  // Modifiers for hierarchy
+  &-primary {
+    background-color: var(--colors-background-bg-brand-solid);
+    color: var(--colors-text-text-primary-on-brand);
+    box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px rgba(10, 13, 18, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+
+    &:hover {
+      background-color: var(--colors-background-bg-brand-solid-hover);
+      color: var(--colors-text-text-primary-on-brand);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px rgba(10, 13, 18, 0.05), 0px 0px 0px 2px #fff, 0px 0px 0px 4px var(--colors-border-border-brand);
+    }
+
+    &:active {
+      background-color: var(--colors-background-bg-brand-solid);
+      transform: translateY(0);
+      color: var(--colors-text-text-primary-on-brand);
+
+    }
+
+    &:disabled {
+      background-color: var(--colors-background-bg-disabled);
+      color: var(--colors-text-text-disabled);
+      box-shadow: 0px 1px 2px rgba(10, 13, 18, 0.05);
+      border-color: var(--colors-border-border-disabled-subtle);
+    }
+  }
+
+  &-secondary {
+    background-color: var(--colors-background-bg-primary);
+    color: var(--colors-text-text-secondary-700);
+    box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px rgba(10, 13, 18, 0.05);
+    border: 1px solid var(--colors-border-border-secondary);
+  }
+
+  &-tertiary {
+    color: var(--colors-text-text-tertiary-600);
+  }
+
+  &-link {
+    color: var(--colors-text-text-brand-tertiary-600);
+  }
+
+  // Modifiers for size
+  &-sm {
+    padding: $spacing-2 $spacing-3;
+    font-size: $font-size-text-sm;
+    line-height: $line-height-text-sm;
+  }
+
+  &-md {
+    padding: $spacing-2-5 $font-size-text-sm;
+    font-size: $font-size-text-sm;
+    line-height: $line-height-text-sm;
+  }
+
+  &-lg {
+    padding: $spacing-2-5 $spacing-4;
+    font-size: $font-size-text-md;
+    line-height: $line-height-text-md;
+    gap: $spacing-1-5;
+  }
+
+  &-xl {
+    padding: $spacing-3 $font-size-text-lg;
+    font-size: $font-size-text-md;
+    line-height: $line-height-text-md;
+    gap: $spacing-1-5;
+  }
+}

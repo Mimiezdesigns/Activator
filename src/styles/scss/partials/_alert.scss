@@ -1,0 +1,45 @@
+@use '../variables' as *;
+
+
+.alert {
+    position: relative;
+    padding: $spacing-3;
+    margin-bottom: $spacing-4;
+    border: 1px solid transparent;
+    border-radius: $radius-md;
+    font-family: $font-family-body;
+
+    .alert-heading {
+        color: inherit;
+    }
+
+    .alert-link {
+        font-weight: $font-weight-semibold;
+    }
+
+    // Variations
+    @each $color-name, $color-value in (
+        "primary": $color-blue-500,
+        "secondary": $color-gray-light-mode-500,
+        "success": $color-success-500,
+        "danger": $color-error-500,
+        "warning": $color-warning-500,
+        "info": $color-cyan-500,
+        "light": $color-gray-light-mode-100,
+        "dark": $color-gray-dark-mode-900
+    ) {
+        &.alert-#{$color-name} {
+            $bg-color: mix($color-base-white, $color-value, 60%);
+            $border-color: mix($color-base-white, $color-value, 60%);
+            $text-color: mix($color-base-black, $color-value, 20%);
+
+            color: $text-color;
+            background-color: $bg-color;
+            border-color: $border-color;
+
+            .alert-link {
+                color: darken($text-color, 10%);
+            }
+        }
+    }
+}
