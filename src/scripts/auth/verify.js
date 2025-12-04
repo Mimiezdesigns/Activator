@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (newUserConfirm) {
     newUserConfirm.addEventListener("click", () => {
-      alert("New User")
-      window.location.href = "/src/pages/auth/change-password.html";
+      window.location.href = "../../auth/change-password.html";
     });
   }
 

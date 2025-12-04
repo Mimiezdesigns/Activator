@@ -15,46 +15,48 @@
   <div class="form-container">
     <div class="form-card text-center ">
       <div class="brand-logo mb-3">
-        <img src="../../public//assets/logo/logo.svg" class="logo" alt="Activator Logo">
+        <img src="../../public//assets/logo/logo_white.svg" class="logo" alt="Activator Logo">
       </div>
 
+      <div class="form-card-inner">
 
-      <h3 class="fw-bold mb-2">Enter Verification Code</h3>
-      <p class="text-muted">
-        We've sent a 6-digit code to your registered device.
-        Enter it below to complete sign-in.
+        <h3 class="fw-bold mb-2">Enter Verification Code</h3>
+        <p class="text-muted">
+          We've sent a 6-digit code to your registered device.
+          Enter it below to complete sign-in.
 
-      </p>
+        </p>
 
-        
-      <div class="text-start text-muted">
-        <label class="form-label fw-semibold">Secure code</label>
+
+        <div class="text-start text-muted">
+          <label class="form-label fw-semibold">Secure code</label>
+        </div>
+
+        <form id="otpForm" class="form">
+          <div class="otp-inputs mb-4">
+            <input type="text" maxlength="1" class="form-control mega-input-field-base" placeholder="0" required>
+            <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
+            <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
+            <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
+            <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
+            <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
+          </div>
+
+          <div class="d-flex gap-4">
+            <button type="button" class="btn btn-secondary btn-md" id="btn-back">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+                <path d="M14.1663 5.83331H0.833008M0.833008 5.83331L5.83301 10.8333M0.833008 5.83331L5.83301 0.833313"
+                  stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+              </svg> <span> Back</span>
+            </button>
+            <button type="submit" id="oldUserConfirm" class="btn btn-primary btn-md">
+              Confirm
+            </button>
+          </div>
+
+        </form>
+
       </div>
-
-      <form id="otpForm" class="form">
-        <div class="otp-inputs mb-4">
-          <input type="text" maxlength="1" class="form-control mega-input-field-base" placeholder="0" required>
-          <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
-          <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
-          <span class="dash">-</span>
-          <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
-          <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
-          <input type="text" maxlength="1" class=" form-control mega-input-field-base" placeholder="0" required>
-        </div>
-
-        <div class="d-flex gap-4">
-          <button type="button" class="btn btn-secondary btn-md" id="btn-back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
-              <path d="M14.1663 5.83331H0.833008M0.833008 5.83331L5.83301 10.8333M0.833008 5.83331L5.83301 0.833313"
-                stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>     <span> Back</span>
-          </button>
-          <button type="submit" id="oldUserConfirm" class="btn btn-primary btn-md">
-            Confirm
-          </button>
-        </div>
-      </form>
-
     </div>
   </div>
 
