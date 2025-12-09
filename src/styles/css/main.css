@@ -299,7 +299,7 @@
 .navbar {
   max-width: 1440px;
   height: 72px;
-  background-color: #195a8c;
+  background-color: #092235;
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -329,14 +329,11 @@
 }
 
 .navbar__add-btn {
-  background-color: #FFFFFF;
-  color: var(-- colors-text-text-brand-primary-900);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-base-white);
   font-weight: 600;
   padding: 8px 16px;
   border: none;
-}
-.navbar__add-btn:hover {
-  background-color: #f0f0f0;
 }
 
 .navbar__links, .navbar__actions {
@@ -345,6 +342,10 @@
   margin: 0px;
   padding: 0px;
   gap: 16px;
+}
+.navbar__links li, .navbar__actions li {
+  display: flex;
+  align-items: center;
 }
 .navbar__links a, .navbar__actions a {
   color: #A4A7AE;
@@ -386,6 +387,7 @@
   height: 40px;
   padding-left: 44px;
   padding-right: 48px;
+  background-color: #092235;
   border: 1px solid #4A6882;
   border-radius: 8px;
   font-size: 14px;
@@ -456,14 +458,29 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .navbar__links, .navbar__actions,
   .navbar__center,
   .navbar__right {
     display: none;
   }
+  .navbar__left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+  }
   .navbar__hamburger {
     display: block;
+  }
+  .navbar__add-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-base-white);
+    font-weight: 600;
+    padding: 8px 16px;
+    border: none;
+    width: 100px;
   }
   .navbar__menu {
     display: none;
@@ -938,6 +955,565 @@
 }
 .modal .modal-dialog .modal-content .modal-footer > * {
   margin: 4px;
+}
+
+.dropdown_drop {
+  position: relative;
+  display: inline-block;
+}
+.dropdown_drop .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown_drop .dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown_drop .dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown_drop .show {
+  display: block;
+}
+
+.parent {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #d6d7d3;
+}
+
+.logomark-parent {
+  flex: 1;
+  border-radius: 12px;
+  background: linear-gradient(68.12deg, #092235, #134469);
+  border: 1px solid #0c2d46;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: relative;
+  isolation: isolate;
+  gap: 20px;
+}
+
+.logomark-parent-1 {
+  flex: 1;
+  border-radius: 12px;
+  background: linear-gradient(68.19deg, #194185, #175cd3);
+  border: 1px solid #0c2d46;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: relative;
+  isolation: isolate;
+  gap: 20px;
+}
+
+.logomark-parent-2 {
+  flex: 1;
+  border-radius: 12px;
+  background: linear-gradient(68.22deg, #053321, #067647);
+  border: 1px solid #0c2d46;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: relative;
+  isolation: isolate;
+  gap: 20px;
+}
+
+.logomark-inner {
+  display: flex;
+  align-items: center;
+}
+
+.logomark {
+  margin: 0;
+  position: absolute;
+  top: 2px;
+  right: -20px;
+  display: flex;
+  align-items: flex-start;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  z-index: 0;
+  flex-shrink: 0;
+}
+
+.content-icon {
+  height: 160px;
+  width: 180px;
+  position: relative;
+  border-radius: 51.75px;
+}
+
+.card-icon {
+  display: none;
+}
+
+.total-entities-parent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+  flex-shrink: 0;
+  position: absolute;
+}
+
+.total-entities {
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  text-align: left;
+}
+
+.frame-group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  z-index: 3;
+  flex-shrink: 0;
+  font-size: 30px;
+}
+
+.folder-check-parent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.folder-check {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+
+.supporting-text {
+  position: relative;
+  line-height: 38px;
+}
+
+.supporting-text2 {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b7d2e6;
+  display: none;
+}
+
+.progress-bar {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.progress-bar2 {
+  height: 4px;
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 4px;
+}
+
+.frame-div {
+  align-self: stretch;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  opacity: 0.7;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #b7d2e6;
+}
+
+.hard-drive-parent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.supporting-text3 {
+  position: relative;
+  line-height: 18px;
+}
+
+.progress-bar3 {
+  align-self: stretch;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 80px;
+}
+
+.progress-bar4 {
+  height: 8px;
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.progress1 {
+  position: absolute;
+  width: 83.9%;
+  top: 0px;
+  right: 16.1%;
+  left: 0%;
+  border-radius: 9999px;
+  background-color: #1570ef;
+  height: 4px;
+}
+
+.progress2 {
+  position: absolute;
+  width: 83.9%;
+  top: 0px;
+  right: 16.1%;
+  left: 0%;
+  border-radius: 9999px;
+  background-color: #22ccee;
+  height: 4px;
+}
+
+.progress3 {
+  position: absolute;
+  width: 83.9%;
+  top: 0px;
+  right: 16.1%;
+  left: 0%;
+  border-radius: 9999px;
+  background-color: #75e0a7;
+  height: 4px;
+}
+
+.history-panel {
+  padding: 10px;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.history-header {
+  color: #343a40;
+  font-weight: bold;
+}
+
+.history-list-item {
+  /* Bootstrap List Group utilities are the base */
+  background-color: #fafafa;
+  /* White background for the item */
+  border: none;
+  /* Remove default Bootstrap border */
+  margin-bottom: 8px;
+  /* Spacing between items */
+  padding: 1rem 1rem;
+  /* Generous padding inside */
+  border-radius: 12px;
+  /* Subtle rounded corners */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  /* Very light shadow for lift */
+  /* Custom blue line on the left */
+  border-left: 5px solid #b7d2e6;
+  /* Default Blue color (like Bootstrap primary) */
+  position: relative;
+  /* Needed for any absolute positioning inside, if required */
+}
+
+/* Specific styling for the lighter-colored item (the 5th one) */
+.history-list-item.light {
+  background-color: #f5f5f5;
+  /* Lighter gray background */
+  border-left: 5px solid #1f71af;
+  /* Muted gray/lighter blue border */
+  color: #495057;
+  /* Slightly muted text color */
+}
+
+/* The header seems to have a stray label, assuming it's a test label */
+.header-label {
+  font-size: 0.75rem;
+  color: #0d6efd;
+  margin-left: 10px;
+}
+
+.activity-panel {
+  padding: 15px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-item {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #f8f9fa;
+}
+
+/* Custom border colors to match the image better than default Bootstrap alerts */
+.activity-item.warning {
+  background-color: #fffaeb;
+  border: 1px solid #fec84b;
+}
+
+.activity-item.info {
+  background-color: #e2edf6;
+  border: 1px solid #a1c4de;
+}
+
+.activity-item.danger {
+  background-color: #fef3f2;
+  border: 1px solid #fda29b;
+}
+
+/* Icon styling */
+.activity-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.activity-icon.warning {
+  color: #ffc107;
+}
+
+/* Yellow icon */
+.activity-icon.info {
+  color: #0d6efd;
+}
+
+/* Blue icon */
+.activity-icon.danger {
+  color: #dc3545;
+}
+
+/* Red icon */
+/* Text styling */
+.activity-meta {
+  font-size: 0.875em;
+  color: #6c757d;
+  /* Muted gray for meta text */
+}
+
+.activity-message {
+  margin-top: 0.25rem;
+  line-height: 1.2;
+  /* Tighten up the line spacing */
+}
+
+.activity-device {
+  font-weight: thin;
+  margin-left: 30px;
+}
+
+.activity-state {
+  color: #495057;
+}
+
+.activity-config {
+  color: #495057;
+}
+
+@media (min-width: 1300px) {
+  .card-icon {
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    mix-blend-mode: luminosity;
+    z-index: 1;
+    flex-shrink: 0;
+    right: -210px;
+    top: 12px;
+    background: #888484;
+    border-radius: 80px;
+    display: block;
+  }
+}
+/* --- Common Card Styles --- */
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px 20px 24px 20px;
+  border: 1px solid #e9ecef;
+  height: 100%; /* Match heights in flex row */
+}
+
+.job-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  height: 100%; /* Match heights in flex row */
+}
+
+.card-title-custom {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Left Chart Specifics --- */
+.badge-count {
+  background-color: #e3effb;
+  color: #3b5b88;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.btn-view-all {
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  background: white;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-view-all:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.chart-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.main-chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+/* --- Right Widget (Active Jobs) Specifics --- */
+.jobs-list {
+  overflow-y: auto;
+  padding-right: 5px; /* Space for scrollbar */
+  width: 100%;
+}
+
+/* Custom Scrollbar for the list */
+.jobs-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.jobs-list::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.job-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+.job-total {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* The canvas container needs height to prevent tooltip clipping, 
+   but bar will be thin inside it */
+.job-chart-wrapper {
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+
+/* Legend below the bar */
+.job-legend {
+  display: flex;
+  gap: 15px;
+  margin-top: -15px; /* Negative margin to pull legend closer to thin bar */
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.btn-block-custom {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  color: #4b5563;
+  font-weight: 700;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+}
+
+.btn-block-custom:hover {
+  background-color: #f9fafb;
 }
 
 :root {

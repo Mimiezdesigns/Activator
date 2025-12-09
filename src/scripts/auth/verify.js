@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .addEventListener("submit", (event) => {
         event.preventDefault();
         alert("Password changed successfully!");
-        window.location.href = "/src/pages/dashboard/dashboard.html";
+        window.location.href = "./pages/dashboard/dashboard.html";
       });
   }
 });

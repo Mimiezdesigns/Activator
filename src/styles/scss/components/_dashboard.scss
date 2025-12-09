@@ -1,0 +1,402 @@
+@use '../variables' as *;
+
+.parent {
+	max-width: $spacing-360;
+	margin: 0 auto;
+	background: #d6d7d3;
+}
+
+// Cards
+
+.logomark-parent {
+	flex: 1;
+	border-radius: 12px;
+	background: linear-gradient(68.12deg, #092235, #134469);
+	border: 1px solid #0c2d46;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 16px 24px;
+	position: relative;
+	isolation: isolate;
+	gap: 20px;
+}
+
+.logomark-parent-1 {
+	flex: 1;
+	border-radius: 12px;
+	background: linear-gradient(68.19deg, #194185, #175cd3);
+	border: 1px solid #0c2d46;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 16px 24px;
+	position: relative;
+	isolation: isolate;
+	gap: 20px;
+}
+
+.logomark-parent-2 {
+	flex: 1;
+	border-radius: 12px;
+	background: linear-gradient(68.22deg, #053321, #067647);
+	border: 1px solid #0c2d46;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 16px 24px;
+	position: relative;
+	isolation: isolate;
+	gap: 20px;
+}
+
+.logomark-inner {
+	display: flex;
+	align-items: center;
+}
+
+.logomark {
+	margin: 0;
+	position: absolute;
+	top: 2px;
+	right: -20px;
+	display: flex;
+	align-items: flex-start;
+	opacity: 0.12;
+	mix-blend-mode: overlay;
+	z-index: 0;
+	flex-shrink: 0;
+}
+
+.content-icon {
+	height: 160px;
+	width: 180px;
+	position: relative;
+	border-radius: 51.75px;
+}
+
+.card-icon {
+	display: none;
+}
+
+.total-entities-parent {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	z-index: 2;
+	flex-shrink: 0;
+	position: absolute;
+}
+
+.total-entities {
+	position: relative;
+	font-size: 18px;
+	line-height: 28px;
+	// font-family: 'Avenir LT Pro';
+	// font-display: 'Avenir LT Pro';
+	color: #fff;
+	text-align: left;
+}
+
+.frame-group {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	z-index: 3;
+	flex-shrink: 0;
+	font-size: 30px;
+}
+
+.folder-check-parent {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.folder-check {
+	height: 16px;
+	width: 16px;
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+	display: none;
+}
+
+.supporting-text {
+	position: relative;
+	line-height: 38px;
+}
+
+.supporting-text2 {
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+	color: #b7d2e6;
+	display: none;
+}
+
+.progress-bar {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.progress-bar2 {
+	height: 4px;
+	flex: 1;
+	position: relative;
+	border-radius: 8px;
+}
+
+.background {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	border-radius: 9999px;
+	background-color: rgba(255, 255, 255, 0.1);
+	height: 4px;
+}
+
+.frame-div {
+	align-self: stretch;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	opacity: 0.7;
+	flex-shrink: 0;
+	font-size: 12px;
+	color: #b7d2e6;
+}
+
+.hard-drive-parent {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.supporting-text3 {
+	position: relative;
+	line-height: 18px;
+}
+
+.progress-bar3 {
+	align-self: stretch;
+	height: 4px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	margin-top: 80px;
+}
+
+.progress-bar4 {
+	height: 8px;
+	flex: 1;
+	position: relative;
+	border-radius: 8px;
+	flex-shrink: 0;
+}
+
+.progress1 {
+	position: absolute;
+	width: 83.9%;
+	top: 0px;
+	right: 16.1%;
+	left: 0%;
+	border-radius: 9999px;
+	background-color: #1570ef;
+	height: 4px;
+}
+
+.progress2 {
+	position: absolute;
+	width: 83.9%;
+	top: 0px;
+	right: 16.1%;
+	left: 0%;
+	border-radius: 9999px;
+	background-color: #22ccee;
+	height: 4px;
+}
+
+.progress3 {
+	position: absolute;
+	width: 83.9%;
+	top: 0px;
+	right: 16.1%;
+	left: 0%;
+	border-radius: 9999px;
+	background-color: #75e0a7;
+	height: 4px;
+}
+
+
+
+// History Panel
+.history-panel {
+	padding: 10px;
+	background-color: white;
+	border-radius: .5rem;
+}
+
+.history-header {
+	color: #343a40;
+	font-weight: bold;
+}
+
+.history-list-item {
+	/* Bootstrap List Group utilities are the base */
+	background-color: #fafafa;
+	/* White background for the item */
+	border: none;
+	/* Remove default Bootstrap border */
+	margin-bottom: 8px;
+	/* Spacing between items */
+	padding: 1rem 1rem;
+	/* Generous padding inside */
+	border-radius: 12px;
+	/* Subtle rounded corners */
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+	/* Very light shadow for lift */
+	/* Custom blue line on the left */
+	border-left: 5px solid #b7d2e6;
+	/* Default Blue color (like Bootstrap primary) */
+	position: relative;
+	/* Needed for any absolute positioning inside, if required */
+}
+
+/* Specific styling for the lighter-colored item (the 5th one) */
+.history-list-item.light {
+	background-color: #f5f5f5;
+	/* Lighter gray background */
+	border-left: 5px solid #1f71af;
+	/* Muted gray/lighter blue border */
+	color: #495057;
+	/* Slightly muted text color */
+}
+
+/* The header seems to have a stray label, assuming it's a test label */
+.header-label {
+	font-size: 0.75rem;
+	color: #0d6efd;
+	margin-left: 10px;
+}
+
+
+
+
+
+// activity panel
+.activity-panel {
+	padding: 15px;
+	border-radius: .5rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.activity-item {
+	padding: 5px;
+	border-radius: 10px;	
+	border: 1px solid transparent;
+	background-color: #f8f9fa;
+}
+
+/* Custom border colors to match the image better than default Bootstrap alerts */
+.activity-item.warning {
+background-color: #fffaeb;
+border: 1px solid #fec84b;
+}
+
+.activity-item.info {
+background-color: #e2edf6;
+border: 1px solid #a1c4de;
+
+}
+
+.activity-item.danger {
+background-color: #fef3f2;
+border: 1px solid #fda29b;
+}
+
+/* Icon styling */
+.activity-icon {
+	margin-right: 0.5rem;
+	font-size: 1.2rem;
+}
+
+.activity-icon.warning {
+	color: #ffc107;
+}
+
+/* Yellow icon */
+.activity-icon.info {
+	color: #0d6efd;
+}
+
+/* Blue icon */
+.activity-icon.danger {
+	color: #dc3545;
+}
+
+/* Red icon */
+
+/* Text styling */
+.activity-meta {
+	font-size: 0.875em;
+	color: #6c757d;
+	/* Muted gray for meta text */
+}
+
+.activity-message {
+	margin-top: 0.25rem;
+	line-height: 1.2;
+	/* Tighten up the line spacing */
+}
+
+.activity-device {
+	font-weight: thin;
+	margin-left: 30px;
+}
+
+.activity-state {
+	color: #495057;
+}
+
+.activity-config {
+	color: #495057;
+}
+
+@media (min-width: 1300px) {
+	.card-icon {
+		padding: 5px;
+		width: 50px;
+		height: 50px;
+		position: relative;
+		mix-blend-mode: luminosity;
+		z-index: 1;
+		flex-shrink: 0;
+		right: -210px;
+		top: 12px;
+		background: #888484;
+		border-radius: 80px;
+		display: block;
+	}
+}
