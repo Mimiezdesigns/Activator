@@ -87,6 +87,7 @@
   align-items: center;
   min-height: 100vh;
   background-color: var(--colors-background-bg-secondary-subtle);
+  padding: 16px;
 }
 .form-container .form-card {
   width: 100%;
@@ -986,6 +987,40 @@
   max-width: 1440px;
   margin: 0 auto;
   background: #f2f2f2;
+}
+
+.dashboard-header-container {
+  /* Mimics the padding and structure of a typical content area */
+  padding-top: 30px;
+  padding-bottom: 20px;
+  /* In a real app, this would be inside a main content area with side padding */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dashboard-title {
+  /* Standard h1/h2 size, bold */
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+  /* Dark text color */
+  margin-left: 10px;
+  /* Space between title and badge */
+}
+
+.region-badge {
+  /* Styling for the "London Region" chip/badge */
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #495057;
+  /* Muted text color */
+  background-color: #e9ecef;
+  /* Light gray background */
+  border-radius: 0.25rem;
+  /* Small radius */
+  padding: 0.35em 0.7em;
+  /* Subtle border, slightly darker than background */
+  border: 1px solid #dee2e6;
 }
 
 .logomark-parent {

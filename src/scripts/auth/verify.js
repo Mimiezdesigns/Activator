@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (oldUserConfirm) {
     oldUserConfirm.addEventListener("click", () => {
-      alert("Old User")
       window.location.href = "../dashboard/dashboard.html";
     });
   }
@@ -266,8 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .getElementById("passwordForm")
       .addEventListener("submit", (event) => {
         event.preventDefault();
-        alert("Password changed successfully!");
-        window.location.href = "./pages/dashboard/dashboard.html";
+        window.location.href = "../dashboard/dashboard.html";
       });
   }
 });
