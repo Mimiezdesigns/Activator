@@ -7,7 +7,6 @@
 
 .navbar {
   // --- Your Constraints & Base Styling ---
-  max-width: $spacing-360;
   height: $spacing-18;
   background-color: $color-brand-900; // Dark blue from your screenshot
   color: #FFFFFF;
@@ -16,11 +15,88 @@
   display: flex;
   align-items: center;
   justify-content: space-between; // Spaces out Left, Center, and Right groups
-  
+
   // --- Sizing & Spacing ---
   margin: 0 auto; // Centers the 1440px container
   padding: 0 $spacing-6; // Horizontal padding
   box-sizing: border-box;
+
+  .logo {
+    background-image: url("/src/public/assets/logo/logo_white.svg");
+    width: 160px;
+    height: 40px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img1 {
+    background-image: url("/src/public/assets/icons/modem-02.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img2 {
+    background-image: url("/src/public/assets/icons/file-code-01.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img3 {
+    background-image: url("/src/public/assets/icons/layers-three-01.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img4 {
+    background-image: url("/src/public/assets/icons/sliders-01.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img5 {
+    background-image: url("/src/public/assets/icons/clock-rewind.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
+
+  .img6 {
+    background-image: url("/src/public/assets/icons/user-01.svg");
+    width: $spacing-6;
+    height: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+  }
 }
 
 /**
@@ -41,7 +117,7 @@
   font-weight: $font-weight-semibold;
   color: #FFFFFF;
   text-decoration: none;
-  
+
 
 }
 
@@ -51,7 +127,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-base-white);
   font-weight: $font-weight-semibold;
-  padding: $spacing-2 $spacing-4; 
+  padding: $spacing-2 $spacing-4;
   border: none;
 
 }
@@ -63,10 +139,12 @@
   padding: $spacing-0;
   gap: $spacing-4;
 
-  li{
+  li {
     display: flex;
     align-items: center;
+    gap: 0px;
   }
+
   a {
     color: #A4A7AE; // Muted color for links
     text-decoration: none;
@@ -75,7 +153,8 @@
     padding: $spacing-2;
 
     &:hover,
-    &.active { // You can add an 'active' class for the current page
+    &.active {
+      // You can add an 'active' class for the current page
       color: #FFFFFF;
     }
   }
@@ -96,6 +175,7 @@
   position: relative;
   width: 100%;
   max-width: $spacing-120; // Sets a max width for the search
+
   &-icon {
     position: absolute;
     left: $font-size-text-sm;
@@ -111,7 +191,7 @@
     height: $spacing-10;
     padding-left: $spacing-11; // Space for icon
     padding-right: $spacing-12; // Space for shortcut
-     background-color: $color-brand-900; 
+    background-color: $color-brand-900;
     border: 1px solid #4A6882; // Subtle border
     border-radius: $radius-md;
     // color: #FFFFFF;
@@ -121,10 +201,10 @@
       color: #A4A7AE;
     }
 
-      &:focus,
-        &--focus {
-          outline: none;
-        }
+    &:focus,
+    &--focus {
+      outline: none;
+    }
   }
 
   &-shortcut {
@@ -155,7 +235,7 @@
 
 .navbar__actions {
   // Re-uses the same link styling as the left side
-  @extend .navbar__links; 
+  @extend .navbar__links;
   gap: $spacing-3;
 }
 
@@ -192,6 +272,7 @@
 
 // --- Responsive Styles ---
 @media (max-width: 1100px) {
+
   .navbar__links,
   .navbar__center,
   .navbar__right {
@@ -199,27 +280,27 @@
   }
 
   .navbar__left {
-  display: flex;
-  align-items: center;
-  gap: $spacing-6;
+    display: flex;
+    align-items: center;
+    gap: $spacing-6;
     justify-content: center;
-  width: 100%;
-}
+    width: 100%;
+  }
 
   .navbar__hamburger {
     display: block; // Show the hamburger
   }
 
   .navbar__add-btn {
-  // The "+ Add" button is white
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--color-base-white);
-  font-weight: $font-weight-semibold;
-  padding: $spacing-2 $spacing-4; 
-  border: none;
-  width: 100px;
+    // The "+ Add" button is white
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-base-white);
+    font-weight: $font-weight-semibold;
+    padding: $spacing-2 $spacing-4;
+    border: none;
+    width: 100px;
 
-}
+  }
 
   .navbar__menu {
     display: none; // Hide the menu by default
@@ -246,9 +327,11 @@
     span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
+
     span:nth-child(2) {
       opacity: 0;
     }
+
     span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }

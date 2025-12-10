@@ -17,23 +17,18 @@
   &-primary {
     background-color: var(--colors-background-bg-brand-solid);
     color: var(--colors-text-text-primary-on-brand);
-    box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px rgba(10, 13, 18, 0.05);
     border-color: rgba(255, 255, 255, 0.12);
 
-    &:hover {
-      background-color: var(--colors-background-bg-brand-solid-hover);
-      color: var(--colors-text-text-primary-on-brand);
-    }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px rgba(10, 13, 18, 0.05), 0px 0px 0px 2px #fff, 0px 0px 0px 4px var(--colors-border-border-brand);
+    &:hover {
+      background-color: var(--colors-background-bg-brand-solid);
+      color: var(--colors-text-text-primary-on-brand);
     }
 
     &:active {
       background-color: var(--colors-background-bg-brand-solid);
       transform: translateY(0);
       color: var(--colors-text-text-primary-on-brand);
-
     }
 
     &:disabled {

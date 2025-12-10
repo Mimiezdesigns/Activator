@@ -1,149 +1,164 @@
   /* --- Common Card Styles --- */
-        .dashboard-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 24px 20px 24px 20px;
-            border: 1px solid #e9ecef;
-            height: 100%; /* Match heights in flex row */
-        }
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            // padding: 20px;
-            border: 1px solid #e9ecef;
-            height: 100%; /* Match heights in flex row */
-        }
+  .dashboard-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 24px 20px 24px 20px;
+      border: 1px solid #e9ecef;
+      height: 100%;
+      /* Match heights in flex row */
+  }
 
-        .card-title-custom {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+  .job-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      // padding: 20px;
+      border: 1px solid #e9ecef;
+      height: 100%;
+      /* Match heights in flex row */
+  }
 
-        /* --- Left Chart Specifics --- */
-        .badge-count {
-            background-color: #e3effb;
-            color: #3b5b88;
-            font-size: 0.85rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-left: 10px;
-        }
+  .card-title-custom {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
 
-        .btn-view-all {
-            border: 1px solid #d1d5db;
-            color: #4b5563;
-            background: white;
-            padding: 6px 16px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.2s;
-            text-decoration: none;
-            display: inline-block;
-        }
+  /* --- Left Chart Specifics --- */
+  .badge-count {
+      background-color: #e3effb;
+      color: #3b5b88;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+  }
 
-        .btn-view-all:hover {
-            background-color: #f9fafb;
-            border-color: #9ca3af;
-        }
+  .btn-view-all {
+      border: 1px solid #d1d5db;
+      color: #4b5563;
+      background: white;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+  }
 
-        .chart-footer {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #9ca3af;
-        }
+  .btn-view-all:hover {
+      background-color: #f9fafb;
+      border-color: #9ca3af;
+  }
 
-        .main-chart-container {
-            position: relative;
-            height: 400px;
-            width: 100%;
-        }
+  .chart-footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+  }
 
-        /* --- Right Widget (Active Jobs) Specifics --- */
-        .jobs-list {
-            overflow-y: auto;
-            padding-right: 5px; /* Space for scrollbar */
-            width: 100%;
-        }
+  .main-chart-container {
+      position: relative;
+      height: 400px;
+      width: 100%;
+  }
 
-        /* Custom Scrollbar for the list */
-        .jobs-list::-webkit-scrollbar {
-            width: 6px;
-        }
-        .jobs-list::-webkit-scrollbar-thumb {
-            background-color: #e5e7eb;
-            border-radius: 4px;
-        }
+  /* --- Right Widget (Active Jobs) Specifics --- */
+  .jobs-list {
+      overflow-y: auto;
+      width: 100%;
+  }
 
-        // .job-item {
-        //     margin-bottom: 24px;
-        // }
+  /* Custom Scrollbar for the list */
+  .jobs-list::-webkit-scrollbar {
+      width: 6px;
+  }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
+  .jobs-list::-webkit-scrollbar-thumb {
+      background-color: #e5e7eb;
+      border-radius: 4px;
+  }
 
-        .job-name {
-            font-weight: 600;
-            color: #374151;
-        }
+  // .job-item {
+  //     margin-bottom: 24px;
+  // }
 
-        .job-total {
-            font-size: 0.85rem;
-            color: #9ca3af;
-        }
+  .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+  }
 
-        /* The canvas container needs height to prevent tooltip clipping, 
+  .job-name {
+      font-weight: 600;
+      color: #374151;
+  }
+
+  .job-total {
+      font-size: 0.85rem;
+      color: #9ca3af;
+  }
+
+  /* The canvas container needs height to prevent tooltip clipping, 
            but bar will be thin inside it */
-        .job-chart-wrapper {
-            position: relative;
-            height: 64px; 
-            width: 100%;
-        }
+  .job-chart-wrapper {
+      position: relative;
+      height: 64px;
+      width: 100%;
+      border-radius: 10px;
+      width: 100%;
 
-        /* Legend below the bar */
-        .job-legend {
-            display: flex;
-            gap: 15px;
-            margin-top: -15px; /* Negative margin to pull legend closer to thin bar */
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
+  }
 
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+  .chart-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
 
-        .legend-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
+  }
 
-        .btn-block-custom {
-            width: 100%;
-            margin-top: 10px;
-            padding: 10px;
-            color: #4b5563;
-            font-weight: 700;
-            border: 1px solid #e5e7eb;
-            background: white;
-            border-radius: 8px;
-        }
-        .btn-block-custom:hover {
-            background-color: #f9fafb;
-        }
+  /* Legend below the bar */
+  .job-legend {
+      display: flex;
+      gap: 5px;
+      margin-top: -15px;
+      /* Negative margin to pull legend closer to thin bar */
+      font-size: 0.8rem;
+      color: #6b7280;
+      justify-content: space-between;
+  }
+
+  .legend-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+  }
+
+  .legend-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+  }
+
+  .btn-block-custom {
+      width: 100%;
+      padding: 10px;
+      color: #4b5563;
+      font-weight: 700;
+      border: 1px solid #e5e7eb;
+      background: white;
+      border-radius: 8px;
+  }
+
+  .btn-block-custom:hover {
+      background-color: #f9fafb;
+  }

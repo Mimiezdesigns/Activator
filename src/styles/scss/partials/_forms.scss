@@ -6,7 +6,6 @@
   align-items: center;
   min-height: 100vh;
   background-color: var(--colors-background-bg-secondary-subtle);
-padding: $spacing-4;
 
   .form-card {
     width: 100%;
@@ -14,7 +13,6 @@ padding: $spacing-4;
     border-radius: $radius-2xl;
     background-color: var(--colors-background-bg-primary);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    width: 440px;
     text-align: center;
     // padding: $spacing-8;
     display: flex;
@@ -27,14 +25,14 @@ padding: $spacing-4;
     color: var(--colors-text-text-primary-900);
     font-family: var(--font-family-body);
 
-    .form-card-inner{
+    .form-card-inner {
       padding: $spacing-8;
     }
 
     .brand-logo {
       background: $color-brand-600;
       padding: $spacing-4;
-      border-radius: $radius-2xl  $radius-2xl 0 0;
+      border-radius: $radius-2xl $radius-2xl 0 0;
 
     }
 
@@ -171,6 +169,7 @@ padding: $spacing-4;
   }
 }
 
+
 .password-req-list {
   li {
     display: flex;
@@ -180,38 +179,44 @@ padding: $spacing-4;
     font-size: var(--font-size-text-sm);
     color: var(--colors-text-text-secondary-700);
 
+    &.valid-req { /* Keeps the text dark when valid */
+        color: var(--colors-text-text-primary-900);
+    }
+
     .req-icon {
       width: $spacing-6;
       height: $spacing-6;
       border-radius: $radius-full;
       aspect-ratio: 1/1;
-      background-color: var(--colors-background-bg-brand-primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      transition: background 0.3s ease, transform 0.2s ease;
-      color: var(--colors-text-text-primary-on-brand);
+      transition: transform 0.2s ease;
 
+      /* --- DEFAULT (INVALID) STATE --- */
+      background-image: url('/src/public/assets/icons/x-transparent-circle.svg'); /* <--- CHECK THIS PATH */
+      background-size: cover; 
+      background-repeat: no-repeat;
+      background-position: center;
+      
+      /* Remove CSS coloring/borders since the SVG provides the visual circle/x */
+      border: none;
+      background-color: transparent; 
+
+      /* Remove the previous CSS icon implementation */
       &::before {
-        content: "✓";
-        font-size: var(--font-size-text-xs);
-        color: transparent;
-        transition: color 0.3s ease;
+        content: none; 
       }
 
+      /* --- VALID STATE --- */
       &.valid {
-        background-color: var(--colors-background-bg-brand-solid);
+        background-image: url('/src/public/assets/icons/check-icon.svg'); /* <--- CHECK THIS PATH */
         transform: scale(1.05);
-
-
-        &::before {
-          color: var(--colors-text-text-primary-on-brand);
-        }
       }
     }
-  }
 }
+  }
+
 
 .password-strength {
   display: block;

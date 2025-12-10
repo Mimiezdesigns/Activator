@@ -1,7 +1,6 @@
 @use '../variables' as *;
 
 .parent {
-	max-width: $spacing-360;
 	margin: 0 auto;
 	background: #f2f2f2;
 }
@@ -102,26 +101,41 @@
 .logomark {
 	margin: 0;
 	position: absolute;
-	top: 2px;
-	right: -20px;
+	top: 4px;
+	right: 0px;
 	display: flex;
-	align-items: flex-start;
+	align-items: flex-end;
 	opacity: 0.12;
 	mix-blend-mode: overlay;
 	z-index: 0;
 	flex-shrink: 0;
+	right: 0;
 }
 
 .content-icon {
-	height: 160px;
-	width: 180px;
+	height: 130px;
+	width: 140px;
 	position: relative;
 	border-radius: 51.75px;
 }
 
 .card-icon {
-	display: none;
-}
+		padding: 5px;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		mix-blend-mode: luminosity;
+		z-index: 1;
+		flex-shrink: 0;
+		top: 19px;
+		right: 27px;
+		background: #888484;
+		border-radius: 80px;
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		justify-content: center;
+	}
 
 .total-entities-parent {
 	display: flex;
@@ -419,19 +433,4 @@
 	color: #495057;
 }
 
-@media (min-width: 1300px) {
-	.card-icon {
-		padding: 5px;
-		width: 50px;
-		height: 50px;
-		position: relative;
-		mix-blend-mode: luminosity;
-		z-index: 1;
-		flex-shrink: 0;
-		right: -210px;
-		top: 12px;
-		background: #888484;
-		border-radius: 80px;
-		display: block;
-	}
-}
+

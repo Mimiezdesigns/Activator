@@ -185,33 +185,21 @@ document.addEventListener("DOMContentLoaded", () => {
     function checkRequirements(value) {
       let passed = 0;
       requirements.forEach((regex, i) => {
+        const iconElement = reqIcons[i]; // The .req-icon span
+        const listItem = iconElement.parentElement; // The parent <li> element
+
         if (regex.test(value)) {
-          // only add 'valid' when requirement is met
-          reqIcons[i].classList.add("valid");
+          // Requirement Met: CSS background changes to checkmark SVG
+          iconElement.classList.add("valid");
+          listItem.classList.add("valid-req");
           passed++;
         } else {
-          reqIcons[i].classList.remove("valid");
+          // Requirement Not Met: CSS background defaults to cross SVG
+          iconElement.classList.remove("valid");
+          listItem.classList.remove("valid-req");
         }
       });
-
-      if (!value) {
-        strengthEl.textContent = "";
-        strengthEl.className = "password-strength";
-        return;
-      }
-
-      if (passed <= 2) {
-        strengthEl.textContent = "Password Strength: Weak";
-        strengthEl.className = "password-strength weak";
-      } else if (passed === 3 || passed === 4) {
-        strengthEl.textContent = "Password Strength: Medium";
-        strengthEl.className = "password-strength medium";
-      } else if (passed === 5) {
-        strengthEl.textContent = "Password Strength: Strong";
-        strengthEl.className = "password-strength strong";
-      }
     }
-
     function validateForm() {
       const match =
         newPassword.value && newPassword.value === confirmPassword.value;
