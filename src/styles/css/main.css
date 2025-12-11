@@ -307,7 +307,7 @@
   box-sizing: border-box;
 }
 .navbar .logo {
-  background-image: url("../../../../src/public/assets/logo/logo_white.svg");
+  background-image: url("../../../public/assets/logo/logo_white.svg");
   width: 160px;
   height: 40px;
   display: flex;
