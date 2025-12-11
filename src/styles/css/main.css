@@ -1064,6 +1064,11 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.dashboard-header-container .dashboard-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 .dashboard-title {
   /* Standard h1/h2 size, bold */
@@ -1071,7 +1076,7 @@
   font-weight: 700;
   color: #212529;
   /* Dark text color */
-  margin-left: 10px;
+  margin-left: 12px;
   /* Space between title and badge */
 }
 

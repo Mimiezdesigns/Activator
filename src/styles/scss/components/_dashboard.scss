@@ -13,6 +13,13 @@
 	/* In a real app, this would be inside a main content area with side padding */
 	padding-left: 20px;
 	padding-right: 20px;
+
+
+	.dashboard-header-inner{
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
 }
 
 .dashboard-title {
@@ -21,7 +28,7 @@
 	font-weight: 700;
 	color: #212529;
 	/* Dark text color */
-	margin-left: 10px;
+	margin-left: 12px;
 	/* Space between title and badge */
 }
 
