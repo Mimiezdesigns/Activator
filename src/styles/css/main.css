@@ -317,7 +317,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img1 {
-  background-image: url("/src/public/assets/icons/modem-02.svg");
+  background-image: url("../../../public/assets/icons/modem-02.svg");
   width: 24px;
   height: 24px;
   display: flex;
@@ -327,7 +327,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img2 {
-  background-image: url("/src/public/assets/icons/file-code-01.svg");
+  background-image: url("../../../public/assets/icons/file-code-01.svg");
   width: 24px;
   height: 24px;
   display: flex;
@@ -337,7 +337,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img3 {
-  background-image: url("/src/public/assets/icons/layers-three-01.svg");
+  background-image: url("../../../public/assets/icons/layers-three-01.svg");
   width: 24px;
   height: 24px;
   display: flex;
@@ -347,7 +347,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img4 {
-  background-image: url("/src/public/assets/icons/sliders-01.svg");
+  background-image: url("../../../public/assets/icons/sliders-01.svg");
   width: 24px;
   height: 24px;
   display: flex;
@@ -357,7 +357,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img5 {
-  background-image: url("/src/public/assets/icons/clock-rewind.svg");
+  background-image: url("../../../public/assets/icons/clock-rewind.svg");
   width: 24px;
   height: 24px;
   display: flex;
@@ -367,7 +367,7 @@
   background-repeat: no-repeat;
 }
 .navbar .img6 {
-  background-image: url("/src/public/assets/icons/user-01.svg");
+  background-image: url("../../../public/assets/icons/user-01.svg");
   width: 24px;
   height: 24px;
   display: flex;
