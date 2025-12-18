@@ -1052,22 +1052,20 @@
 }
 
 .parent {
-  margin: 0 auto;
   background: #f2f2f2;
 }
 
 .dashboard-header-container {
-  /* Mimics the padding and structure of a typical content area */
-  padding-top: 30px;
-  padding-bottom: 20px;
-  /* In a real app, this would be inside a main content area with side padding */
-  padding-left: 20px;
-  padding-right: 20px;
+  display: flex;
+  align-items: start;
+  padding: 24px;
 }
 .dashboard-header-container .dashboard-header-inner {
+  gap: 10px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  align-content: center;
+  position: relative;
 }
 
 .dashboard-title {
@@ -1075,24 +1073,16 @@
   font-size: 20px;
   font-weight: 700;
   color: #212529;
-  /* Dark text color */
-  margin-left: 12px;
-  /* Space between title and badge */
 }
 
 .region-badge {
-  /* Styling for the "London Region" chip/badge */
   font-size: 0.8rem;
   font-weight: 500;
   color: #495057;
-  /* Muted text color */
   background-color: #e9ecef;
-  /* Light gray background */
   border-radius: 0.25rem;
-  /* Small radius */
-  padding: 0.35em 0.7em;
-  /* Subtle border, slightly darker than background */
   border: 1px solid #dee2e6;
+  padding: 2px;
 }
 
 .logomark-parent {
@@ -1106,10 +1096,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 24px;
   position: relative;
   isolation: isolate;
   gap: 20px;
+  max-height: 194px;
 }
 
 .logomark-parent-1 {
@@ -1123,10 +1114,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 24px;
   position: relative;
   isolation: isolate;
   gap: 20px;
+  max-height: 194px;
 }
 
 .logomark-parent-2 {
@@ -1140,10 +1132,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 24px;
   position: relative;
   isolation: isolate;
-  gap: 20px;
+  max-height: 194px;
 }
 
 .logomark-inner {
@@ -1273,7 +1265,6 @@
 
 .frame-div {
   align-self: stretch;
-  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1285,6 +1276,12 @@
 }
 
 .hard-drive-parent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hard-drive-parent-inner {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1346,9 +1343,9 @@
 }
 
 .history-panel {
-  padding: 10px;
+  padding: 24px;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 12px;
 }
 
 .history-header {
@@ -1357,24 +1354,14 @@
 }
 
 .history-list-item {
-  /* Bootstrap List Group utilities are the base */
   background-color: #fafafa;
-  /* White background for the item */
   border: none;
-  /* Remove default Bootstrap border */
   margin-bottom: 8px;
-  /* Spacing between items */
-  padding: 1rem 1rem;
-  /* Generous padding inside */
+  padding: 24px;
   border-radius: 12px;
-  /* Subtle rounded corners */
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
-  /* Very light shadow for lift */
-  /* Custom blue line on the left */
   border-left: 5px solid #b7d2e6;
-  /* Default Blue color (like Bootstrap primary) */
   position: relative;
-  /* Needed for any absolute positioning inside, if required */
 }
 
 /* Specific styling for the lighter-colored item (the 5th one) */
@@ -1395,8 +1382,8 @@
 }
 
 .activity-panel {
-  padding: 15px;
-  border-radius: 0.5rem;
+  padding: 24px;
+  border-radius: 12px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   background-color: #fff;
   display: flex;
@@ -1479,7 +1466,7 @@
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 24px 20px 24px 20px;
+  padding: 24px;
   border: 1px solid #e9ecef;
   height: 100%;
   /* Match heights in flex row */
@@ -1489,6 +1476,7 @@
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
   border: 1px solid #e9ecef;
   height: 100%;
   /* Match heights in flex row */
