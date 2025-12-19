@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (oldUserConfirm) {
     oldUserConfirm.addEventListener("click", () => {
-      window.location.href = "../dashboard/dashboard.html";
+      window.location.href = "../dashboard/new-dashboard.html";
     });
   }
 
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .getElementById("passwordForm")
       .addEventListener("submit", (event) => {
         event.preventDefault();
-        window.location.href = "../dashboard/dashboard.html";
+        window.location.href = "../dashboard/new-dashboard.html";
       });
   }
 });

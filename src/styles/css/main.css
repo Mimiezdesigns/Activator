@@ -247,7 +247,7 @@
   justify-content: center;
   transition: transform 0.2s ease;
   /* --- DEFAULT (INVALID) STATE --- */
-  background-image: url("/src/public/assets/icons/x-transparent-circle.svg"); /* <--- CHECK THIS PATH */
+  background-image: url("../../../public/assets/icons/x-transparent-circle.svg"); /* <--- CHECK THIS PATH */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -261,7 +261,7 @@
   content: none;
 }
 .password-req-list li .req-icon.valid {
-  background-image: url("/src/public/assets/icons/check-icon.svg"); /* <--- CHECK THIS PATH */
+  background-image: url("../../../public/assets/icons/check-icon.svg"); /* <--- CHECK THIS PATH */
   transform: scale(1.05);
 }
 
