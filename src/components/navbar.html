@@ -1,92 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/css/main.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/css/main.css">
+  <title>Document</title>
 </head>
+
 <body>
-<nav class="navbar">
-  <div class="navbar__left">
-    <a href="/src/index.html" class="navbar__brand">
-      <div class="logo">
+  <nav class="navbar">
+    <div class="navbar__left">
+      <a href="/src/index.html" class="navbar__brand">
+        <div class="logo">
 
-      </div>
-    </a>
-    
-    <button class="btn navbar__add-btn">+ Add</button>
-    
-    <div class="navbar__menu">
-      <ul class="navbar__links">
-        <li class="">
-          <div class="img1"></div>
-          <img src="" alt="" srcset="">
-          <a href="#" class="active">Devices</a></li>
-        <li>
-          <div class="img2"></div>
+        </div>
+      </a>
+
+      <button class="btn navbar__add-btn">+ Add</button>
+
+      <div class="navbar__menu">
+        <ul class="navbar__links">
+          <li class="">
+            <div class="img1"></div>
+            <img src="" alt="" srcset="">
+            <a href="#" class="active">Devices</a>
+          </li>
+          <li>
+            <div class="img2"></div>
             <a href="#">Profiles</a>
-        </li>
-        <li>
-          <div class="img3"></div>
-           <a href="#">Jobs</a>
-        </li>
-      </ul>
+          </li>
+          <li>
+            <div class="img3"></div>
+            <a href="#">Jobs</a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="navbar__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
 
-    <button class="navbar__hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-
-  <div class="navbar__center">
-    <div class="navbar__search">
-      <span class="navbar__search-icon">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.7422 10.3438C12.5312 9.35156 13 8.125 13 6.75C13 3.4375 10.3125 0.75 7 0.75C3.6875 0.75 1 3.4375 1 6.75C1 10.0625 3.6875 12.75 7 12.75C8.375 12.75 9.60156 12.2812 10.5938 11.4922L14.4375 15.3359C14.6328 15.5312 14.9453 15.5312 15.1406 15.3359C15.3359 15.1406 15.3359 14.8281 15.1406 14.6328L11.7422 10.3438ZM7 11.25C4.51562 11.25 2.5 9.23438 2.5 6.75C2.5 4.26562 4.51562 2.25 7 2.25C9.48438 2.25 11.5 4.26562 11.5 6.75C11.5 9.23438 9.48438 11.25 7 11.25Z" fill="#A4A7AE"/>
-        </svg>
-      </span>
-      <input type="text" class="navbar__search-input" placeholder="Search">
-      <span class="navbar__search-shortcut">⌘K</span>
-      <div class="search-dropdown">
-        <div class="search-dropdown-item">
-            <span class="item-text">Recent Searches</span>
-        </div>
-        <div class="search-dropdown-item">
-            <span class="item-text">Search for users</span>
-        </div>
-        <div class="search-dropdown-item">
-            <span class="item-text">Search for devices</span>
-        </div>
-        <div class="dropdown-divider"></div>
-        <div class="search-dropdown-item">
-            <span class="item-text">Advanced Search</span>
+    <div class="navbar__center">
+      <div class="navbar__search">
+        <span class="navbar__search-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.7422 10.3438C12.5312 9.35156 13 8.125 13 6.75C13 3.4375 10.3125 0.75 7 0.75C3.6875 0.75 1 3.4375 1 6.75C1 10.0625 3.6875 12.75 7 12.75C8.375 12.75 9.60156 12.2812 10.5938 11.4922L14.4375 15.3359C14.6328 15.5312 14.9453 15.5312 15.1406 15.3359C15.3359 15.1406 15.3359 14.8281 15.1406 14.6328L11.7422 10.3438ZM7 11.25C4.51562 11.25 2.5 9.23438 2.5 6.75C2.5 4.26562 4.51562 2.25 7 2.25C9.48438 2.25 11.5 4.26562 11.5 6.75C11.5 9.23438 9.48438 11.25 7 11.25Z"
+              fill="#A4A7AE" />
+          </svg>
+        </span>
+        <input type="text" class="navbar__search-input" placeholder="Search">
+        <span class="navbar__search-shortcut">⌘K</span>
+        <div class="search-dropdown">
+          <div class="search-dropdown-spliter">
+            <div class="split-one">
+              <div class="search-dropdown-item">
+                <span class="item-text">Device</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">  Profiled Device</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Standalone Device</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Job Queue</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Users</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Group</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Profile</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">ID</span>
+              </div>
+            </div>
+             <div class="split-two">
+              <div class="search-dropdown-item">
+                <span class="item-text">Name</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Serial</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Bank Serial</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Management IP</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Running</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Configured Software</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Mismatched</span>
+              </div>
+              <div class="search-dropdown-item">
+                <span class="item-text">Mismatched Alt</span>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="search-dropdown-item">
+            <span class="item-text">Select a Category to filter or start typing to search</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="navbar__right">
-    <ul class="navbar__actions">
-      <li>
-       
+    <div class="navbar__right">
+      <ul class="navbar__actions">
+        <li>
+
           <div class="img4"></div>
 
-        <a href="#">Administration</a>
-      </li>
-      <li>
+          <a href="#">Administration</a>
+        </li>
+        <li>
           <div class="img5"></div>
-        <a href="#">Recent</a>
-      </li>
-    </ul>
-    
-    <div class="navbar__avatar">
-          <div class="img6"></div>
+          <a href="#">Recent</a>
+        </li>
+      </ul>
+
+      <div class="navbar__avatar">
+        <div class="img6"></div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 </body>
+
 </html>

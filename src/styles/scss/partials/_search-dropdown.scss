@@ -4,6 +4,7 @@
     display: none;
     position: absolute;
     top: 100%;
+    margin-top: 10px;
     left: 0;
     width: 100%;
     background-color: $color-base-white;
@@ -13,6 +14,14 @@
     padding: $spacing-1 0;
     z-index: 1000;
 
+    .search-dropdown-spliter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .split-one{
+        border-right: 1px solid $color-gray-light-mode-200;
+    }
     .search-dropdown-item {
         display: flex;
         align-items: center;

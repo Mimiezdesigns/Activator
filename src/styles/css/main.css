@@ -21,6 +21,7 @@
   overflow: hidden;
   gap: 4px;
   width: 100%;
+  border-radius: 5px;
 }
 .btn-primary {
   background-color: var(--colors-background-bg-brand-solid);
@@ -869,6 +870,7 @@
   display: none;
   position: absolute;
   top: 100%;
+  margin-top: 10px;
   left: 0;
   width: 100%;
   background-color: #ffffff;
@@ -877,6 +879,13 @@
   box-shadow: var(--colors-effects-shadows-shadow-lg-01);
   padding: 4px 0;
   z-index: 1000;
+}
+.search-dropdown .search-dropdown-spliter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.search-dropdown .split-one {
+  border-right: 1px solid #e9eaeb;
 }
 .search-dropdown .search-dropdown-item {
   display: flex;
