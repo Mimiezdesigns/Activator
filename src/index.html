@@ -5,9 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activator</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./styles/css/main.css">
 </head>
 
@@ -22,22 +19,22 @@
 
         <div class="form-card-inner">
 
-          <div class="mb-3">
-            <h3 class="fw-bold">Log in to your account</h3>
+          <div class="instruction">
+            <h3 class="">Log in to your account</h3>
             </p>
           </div>
 
           <form class="form">
             <div class="form-group">
-              <label for="username" class="form-label text-start">Username</label>
+              <label for="username" class=" username">Username</label>
               <input type="text" class="form-control" id="username" placeholder="Enter your username">
             </div>
 
             <div class="form-group">
-              <label for="password" class="form-label text-start">Password</label>
-              <div class="position-relative">
+              <label for="password" class="password">Password</label>
+              <div class="relative-div">
                 <input type="password" class="form-control" id="password" placeholder="••••••••">
-                <span class="toggle-password position-absolute end-0 top-50 translate-middle-y me-3 text-muted">
+                <span class="toggle-password span-absolute">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
                     <path
                       d="M1.17592 6.14212C1.08512 5.99836 1.03973 5.92648 1.01432 5.81561C0.995228 5.73233 0.995228 5.601 1.01432 5.51772C1.03973 5.40685 1.08512 5.33497 1.17591 5.19121C1.92619 4.00323 4.15943 1 7.56277 1C10.9661 1 13.1994 4.00323 13.9496 5.19121C14.0404 5.33497 14.0858 5.40685 14.1112 5.51772C14.1303 5.601 14.1303 5.73233 14.1112 5.81561C14.0858 5.92648 14.0404 5.99836 13.9496 6.14212C13.1994 7.33011 10.9661 10.3333 7.56277 10.3333C4.15943 10.3333 1.92619 7.33011 1.17592 6.14212Z"
@@ -48,7 +45,7 @@
                   </svg>
                 </span>
               </div>
-              <div id="loginError" class="d-flex text-start text-danger"></div>
+              <div id="loginError" class="loginError"></div>
 
             </div>
 

@@ -85,6 +85,9 @@
   min-height: 100vh;
   background-color: var(--colors-background-bg-secondary-subtle);
 }
+.form-container .brand-logo {
+  margin-bottom: 1rem;
+}
 .form-container .form-card {
   width: 100%;
   position: relative;
@@ -96,7 +99,7 @@
   flex-direction: column;
   box-sizing: border-box;
   gap: var(--spacing-6);
-  max-width: 440px;
+  width: 440px;
   text-align: center;
   font-size: var(--font-size-display-sm);
   color: var(--colors-text-text-primary-900);
@@ -104,6 +107,31 @@
 }
 .form-container .form-card .form-card-inner {
   padding: 32px;
+}
+.form-container .form-card .form-card-inner .secure {
+  text-align: start;
+  color: #6c757d;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.form-container .form-card .form-card-inner .qr-code-scanner {
+  margin-bottom: 1rem;
+}
+.form-container .form-card .form-card-inner .qr-code-scanner img {
+  width: 100%;
+  height: 100%;
+}
+.form-container .form-card .form-card-inner .instruction {
+  margin-bottom: 12px;
+}
+.form-container .form-card .form-card-inner .instruction p {
+  color: #6c757d;
+}
+.form-container .form-card .form-card-inner .instruction h3 {
+  font-weight: bold;
+}
+.form-container .form-card .form-card-inner .instruction-text {
+  margin-bottom: 20px;
 }
 .form-container .form-card .brand-logo {
   background: #195a8c;
@@ -116,6 +144,30 @@
 .form-container .form-card form .form-group {
   position: relative;
   margin-bottom: 16px;
+}
+.form-container .form-card form .form-group .username {
+  display: flex;
+  text-align: start;
+}
+.form-container .form-card form .form-group .password {
+  display: flex;
+  text-align: start;
+}
+.form-container .form-card form .form-group .relative-div {
+  position: relative;
+}
+.form-container .form-card form .form-group .relative-div .span-absolute {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 1rem;
+  color: #6c757d;
+}
+.form-container .form-card form .form-group .loginError {
+  display: flex;
+  text-align: start;
+  color: red;
 }
 .form-container .form-card form .form-group .form-control {
   width: 100%;
@@ -153,6 +205,10 @@
   color: var(--colors-text-text-secondary-700);
   width: 100%;
 }
+.form-container .form-card form .action {
+  display: flex;
+  gap: 4px;
+}
 
 .otp-inputs {
   align-self: stretch;
@@ -166,6 +222,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .otp-inputs .dash {
   display: flex;
@@ -201,6 +258,7 @@
   width: 50px;
   text-align: center;
   font-size: var(--font-size-display-xs);
+  outline: none;
 }
 .otp-inputs .mega-input-field-base::-moz-placeholder {
   color: var(--colors-text-text-placeholder-subtle);
@@ -220,13 +278,18 @@
   border-radius: 12px;
   padding: 16px;
   border: 1px solid var(--colors-border-border-secondary);
+  text-align: start;
+  margin-bottom: 16px;
 }
-.password-req-box h6 {
+.password-req-box h4 {
   font-weight: var(--font-weight-semibold);
   margin-bottom: 8px;
   color: var(--colors-text-text-primary-900);
 }
 
+.password-req-list {
+  list-style: none;
+}
 .password-req-list li {
   display: flex;
   align-items: center;
@@ -235,7 +298,8 @@
   font-size: var(--font-size-text-sm);
   color: var(--colors-text-text-secondary-700);
 }
-.password-req-list li.valid-req { /* Keeps the text dark when valid */
+.password-req-list li.valid-req {
+  /* Keeps the text dark when valid */
   color: var(--colors-text-text-primary-900);
 }
 .password-req-list li .req-icon {
@@ -248,7 +312,8 @@
   justify-content: center;
   transition: transform 0.2s ease;
   /* --- DEFAULT (INVALID) STATE --- */
-  background-image: url("../../../public/assets/icons/x-transparent-circle.svg"); /* <--- CHECK THIS PATH */
+  background-image: url("../../../public/assets/icons/x-transparent-circle.svg");
+  /* <--- CHECK THIS PATH */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -262,7 +327,8 @@
   content: none;
 }
 .password-req-list li .req-icon.valid {
-  background-image: url("../../../public/assets/icons/check-icon.svg"); /* <--- CHECK THIS PATH */
+  background-image: url("../../../public/assets/icons/check-icon.svg");
+  /* <--- CHECK THIS PATH */
   transform: scale(1.05);
 }
 
@@ -291,6 +357,44 @@
   color: var(--colors-text-text-error-primary-600);
 }
 
+@media (max-width: 480px) {
+  .form-card {
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    background-color: var(--colors-background-bg-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: var(--spacing-6);
+    max-width: 350px;
+    text-align: center;
+    font-size: var(--font-size-display-sm);
+    color: var(--colors-text-text-primary-900);
+    font-family: var(--font-family-body);
+  }
+}
+@media (max-width: 320px) {
+  .form-card {
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    background-color: var(--colors-background-bg-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: var(--spacing-6);
+    max-width: 280px;
+    text-align: center;
+    font-size: var(--font-size-display-sm);
+    color: var(--colors-text-text-primary-900);
+    font-family: var(--font-family-body);
+  }
+}
 /*
  * ===================================
  * NAVBAR COMPONENT
