@@ -73,7 +73,6 @@ body {
    ============================================================================ */
 
 .dashboard-container {
-    max-width: 1600px;
     margin: 0 auto;
     padding: var(--spacing-2xl);
 }
@@ -120,10 +119,16 @@ body {
    ============================================================================ */
 
 .dashboard-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 330px;
-    gap: var(--spacing-2xl);
-    align-items: flex-end;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: var(--spacing-2xl);
+  align-items: flex-start;
+}
+
+/* THIS IS VERY IMPORTANT */
+.center-content,
+.right-sidebar {
+  min-width: 0;
 }
 
 
@@ -234,131 +239,6 @@ body {
     font-size: 18px;
 }
 
-/* .stat-card-frame-child {
-    height: 56px;
-    width: 56px;
-    position: relative;
-    border-radius: 9999px;
-}
-
-.stat-card-frame-group {
-    width: 282px;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    z-index: 3;
-    flex-shrink: 0;
-    font-size: 30px;
-}
-
-.stat-card-frame-container {
-    width: 298px;
-    border-radius: 100px;
-    display: none;
-    align-items: center;
-    gap: 2px;
-    flex-shrink: 0;
-} */
-
-.stat-card-folder-check-parent {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* .stat-card-folder-check {
-    height: 16px;
-    width: 16px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-} */
-
-/* .stat-card-supporting-text {
-    position: relative;
-    line-height: 38px;
-}
-
-.stat-card-supporting-text2 {
-    position: relative;
-    font-size: 14px;
-    line-height: 20px;
-    color: #b7d2e6;
-    display: none;
-}
-
-.stat-card-progress-bar {
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.stat-card-progress-bar2 {
-    height: 4px;
-    flex: 1;
-    position: relative;
-    border-radius: 8px;
-}
-
-.stat-card-background {
-    position: absolute;
-    width: 100%;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    border-radius: 9999px;
-    background-color: rgba(255, 255, 255, 0.1);
-    height: 4px;
-}
-
-.stat-card-progress {
-    position: absolute;
-    width: 83.9%;
-    top: 0px;
-    right: 16.1%;
-    left: 0%;
-    border-radius: 9999px;
-    background-color: #1570ef;
-    height: 4px;
-}
-
-.stat-card-frame-div {
-    align-self: stretch;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    opacity: 0.7;
-    flex-shrink: 0;
-    font-size: 12px;
-    color: #b7d2e6;
-}
-
-.stat-card-hard-drive-parent {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.stat-card-dot {
-    height: 8px;
-    width: 8px;
-    position: relative;
-    display: none;
-}
-
-.stat-card-supporting-text3 {
-    position: relative;
-    line-height: 18px;
-}
-
-
-
- */
 
  .stat-card-hard-drive-container {
     width: 80px;
@@ -440,6 +320,17 @@ body {
 /* ============================================================================
    Charts - Interactive Chart.js Versions
    ============================================================================ */
+.chart-card,
+.chart-container-wrapper {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.chart-container-wrapper canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 
 .charts-container {
     display: grid;
@@ -1528,6 +1419,11 @@ white-space: nowrap;
    Sidebars
    ============================================================================ */
 
+.history-table-cell-parent,
+.active-jobs-segmented-bar-parent {
+  overflow-x: hidden;
+}
+
 .right-sidebar {
     background-color: transparent;
     border-radius: 0;
@@ -1538,6 +1434,8 @@ white-space: nowrap;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+      max-width: 330px;
+  overflow-x: hidden;
 }
 
 .sidebar-section {
@@ -2154,6 +2052,7 @@ white-space: nowrap;
     .stat-card-frame-parent {
         flex-direction: column;
         gap: var(--spacing-md);
+
     }
     
     .stat-card-logomark-parent,

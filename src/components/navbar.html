@@ -17,7 +17,21 @@
         </div>
       </a>
 
-      <button class="btn navbar__add-btn">+ Add</button>
+      <div class="navbar__add-wrapper">
+        <button class="btn navbar__add-btn" id="addBtn">+ Add</button>
+
+        <!-- DROPDOWN -->
+        <div class="add-dropdown" id="addDropdown">
+          <button class="add-dropdown__item">+ Device</button>
+          <button class="add-dropdown__item">+ Profile</button>
+          <button class="add-dropdown__item">+ Job</button>
+          <hr />
+          <button class="add-dropdown__item muted">
+            ⬆ Import Profile/Device
+          </button>
+        </div>
+      </div>
+
 
       <div class="navbar__menu">
         <ul class="navbar__links">
@@ -62,7 +76,7 @@
                 <span class="item-text">Device</span>
               </div>
               <div class="search-dropdown-item">
-                <span class="item-text">  Profiled Device</span>
+                <span class="item-text"> Profiled Device</span>
               </div>
               <div class="search-dropdown-item">
                 <span class="item-text">Standalone Device</span>
@@ -83,7 +97,7 @@
                 <span class="item-text">ID</span>
               </div>
             </div>
-             <div class="split-two">
+            <div class="split-two">
               <div class="search-dropdown-item">
                 <span class="item-text">Name</span>
               </div>
@@ -120,21 +134,95 @@
 
     <div class="navbar__right">
       <ul class="navbar__actions">
-        <li>
+        <li class="navbar__action has-dropdown">
+          <button class="navbar__action-btn" id="adminBtn">
+            <div class="img4"></div>
+            <span>Administration</span>
+          </button>
 
-          <div class="img4"></div>
-
-          <a href="#">Administration</a>
+          <div class="dropdown-menu" id="adminDropdown">
+            <a href="#">File Server</a>
+            <a href="#">Authentication</a>
+            <a href="#">User Management</a>
+            <a href="#">Active Updates</a>
+            <a href="#">SNMP</a>
+            <a href="#">SSH</a>
+            <a href="#">Device Web</a>
+            <a href="#">Software & Hardware</a>
+            <a href="#">System</a>
+            <a href="#">License Key</a>
+            <a href="#">OSS Integrator</a>
+            <a href="#">Checked-out Config</a>
+            <a href="#">Recycle Bin</a>
+          </div>
         </li>
-        <li>
+
+        <li class="navbar__recent">
           <div class="img5"></div>
-          <a href="#">Recent</a>
+
+          <button id="recentBtn" class="recent-btn">
+            Recent
+          </button>
+
+          <div id="recentDropdown" class="recent-dropdown">
+            <h4>Recent Activities</h4>
+            <div class="recent-dropdown-inner">
+
+
+              <div class="recent-item">
+                Viewed Device-001 Details
+                <span>2 mins ago</span>
+              </div>
+
+              <div class="recent-item">
+                Viewed Device-002 Details
+                <span>15 mins ago</span>
+              </div>
+
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+              <div class="recent-item">
+                Viewed Device-003 Details
+                <span>30 mins ago</span>
+              </div>
+            </div>
+
+          </div>
         </li>
+
       </ul>
 
-      <div class="navbar__avatar">
-        <div class="img6"></div>
-      </div>
+      <div class="navbar__avatar profile-menu">
+  <div class="img6" id="profileBtn"></div>
+
+  <div class="profile-dropdown" id="profileDropdown">
+    <div class="profile-item">bunmi.bakare</div>
+    <div class="profile-divider"></div>
+    <div class="profile-item">Group: London</div>
+    <div class="profile-item">Account Settings</div>
+    <div class="profile-divider"></div>
+    <div class="profile-item logout">Sign out</div>
+  </div>
+</div>
+
     </div>
   </nav>
 
